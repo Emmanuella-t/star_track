@@ -1,0 +1,92 @@
+.demo-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(circle at top right, rgba(184, 217, 201, 0.35), transparent 32%),
+    var(--color-ivory);
+}
+
+.demo-page__main {
+  flex: 1;
+  padding: 2.5rem 0 4rem;
+}
+
+.demo-page__content {
+  max-width: 920px;
+}
+
+.demo-page h1 {
+  font-size: clamp(2rem, 4.5vw, 3.1rem);
+  max-width: 16ch;
+  margin-bottom: 0.85rem;
+}
+
+.demo-page__lead {
+  max-width: 40rem;
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.demo-roles {
+  display: grid;
+  gap: 1rem;
+}
+
+.demo-role {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-soft);
+  display: grid;
+  gap: 0.85rem;
+  justify-items: start;
+}
+
+.demo-role__icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  background: rgba(0, 160, 155, 0.12);
+  color: var(--logo-teal);
+}
+
+.demo-role__icon--advisor {
+  background: rgba(215, 173, 86, 0.22);
+  color: #6d5318;
+}
+
+.demo-role h2 {
+  font-size: 1.35rem;
+}
+
+.demo-role p {
+  color: var(--color-muted);
+}
+
+.demo-page__status {
+  margin-top: 1.75rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.demo-page__status a,
+.demo-page__status a:visited {
+  color: var(--color-evergreen);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+@media (min-width: 760px) {
+  .demo-roles {
+    grid-template-columns: 1fr 1fr;
+  }
+}

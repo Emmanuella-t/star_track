@@ -1,0 +1,49 @@
+:root {
+  /* Brand UI (VISUAL_DESIGN_SPEC) */
+  --color-evergreen: #173f35;
+  --color-forest: #102b25;
+  --color-gold: #d7ad56;
+  --color-ivory: #f7f4eb;
+  --color-mint: #b8d9c9;
+  --color-ink: #263641;
+  --color-muted: #5e7068;
+  --color-border: #dfe8e1;
+  --color-white: #ffffff;
+  --color-surface: #f3f7f4;
+  --color-danger: #9b3b3b;
+
+  /* Official logo colors (do not recolor logo assets) */
+  --logo-navy: #00284f;
+  --logo-teal: #00a09b;
+
+  --font-display: "Sora", "Segoe UI", sans-serif;
+  --font-body: "Figtree", "Segoe UI", sans-serif;
+
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+
+  --shadow-soft: 0 10px 30px rgba(16, 43, 37, 0.08);
+  --shadow-lift: 0 18px 48px rgba(16, 43, 37, 0.16);
+  --shadow-hero: 0 28px 70px rgba(8, 28, 22, 0.28);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 72px;
+
+  --content-max: 1120px;
+  --header-height: 76px;
+
+  --focus-ring: 0 0 0 3px rgba(215, 173, 86, 0.55);
+
+  --motion-fast: 180ms;
+  --motion-med: 280ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}

@@ -1,0 +1,32 @@
+.st-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.28rem 0.65rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.st-badge--mint {
+  background: rgba(184, 217, 201, 0.45);
+  color: var(--color-evergreen);
+}
+
+.st-badge--gold {
+  background: rgba(215, 173, 86, 0.28);
+  color: #6d5318;
+}
+
+.st-badge--ink {
+  background: rgba(38, 54, 65, 0.08);
+  color: var(--color-ink);
+}
+
+.st-badge--sample {
+  background: rgba(0, 160, 155, 0.12);
+  color: var(--logo-teal);
+}

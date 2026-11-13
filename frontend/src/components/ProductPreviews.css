@@ -1,0 +1,262 @@
+.product-previews {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  width: min(100%, 26rem);
+  margin-inline: auto;
+  perspective: 1400px;
+}
+
+.preview-stage-item {
+  position: relative;
+  width: 100%;
+  will-change: transform;
+}
+
+.preview-parallax-layer,
+.preview-float-layer {
+  width: 100%;
+  will-change: transform;
+}
+
+.preview-card {
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid rgba(223, 232, 225, 0.95);
+  border-radius: var(--radius-xl);
+  box-shadow:
+    0 16px 36px rgba(8, 28, 22, 0.18),
+    0 2px 8px rgba(8, 28, 22, 0.08);
+  overflow: hidden;
+  color: var(--color-ink);
+  transform-origin: center;
+  cursor: default;
+}
+
+.preview-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 0.95rem;
+  border-bottom: 1px solid var(--color-border);
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-forest);
+  background: linear-gradient(180deg, #fbfffc 0%, #f4f8f5 100%);
+}
+
+.preview-card__body {
+  padding: 0.9rem;
+}
+
+.preview-card--chat {
+  z-index: 3;
+}
+
+.preview-card--progress {
+  z-index: 2;
+}
+
+.preview-card--booking {
+  z-index: 1;
+}
+
+.chat-bubble {
+  border-radius: 14px;
+  padding: 0.7rem 0.8rem;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  max-width: 94%;
+}
+
+.chat-bubble + .chat-bubble {
+  margin-top: 0.55rem;
+}
+
+.chat-bubble--user {
+  margin-left: auto;
+  background: var(--color-forest);
+  color: var(--color-white);
+  border-bottom-right-radius: 6px;
+}
+
+.chat-bubble--bot {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-bottom-left-radius: 6px;
+}
+
+.chat-bubble cite {
+  display: block;
+  margin-top: 0.4rem;
+  font-style: normal;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--logo-teal);
+}
+
+.progress-label {
+  font-size: 0.8rem;
+  font-weight: 650;
+  color: var(--color-muted);
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+  height: 0.5rem;
+  border-radius: var(--radius-pill);
+  background: #e5eee8;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.progress-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--logo-teal), #3f9b72);
+}
+
+.progress-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.progress-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.84rem;
+  padding: 0.5rem 0.6rem;
+  border-radius: 12px;
+  background: var(--color-surface);
+}
+
+.progress-list li::before {
+  content: "";
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 4px;
+  border: 1.5px solid var(--color-border);
+  background: var(--color-white);
+  flex-shrink: 0;
+}
+
+.progress-list li[data-done="true"]::before {
+  border-color: var(--logo-teal);
+  background: var(--logo-teal);
+  box-shadow: inset 0 0 0 2px var(--color-white);
+}
+
+.slot-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: 12px;
+  background: var(--color-surface);
+  border: 1px solid transparent;
+}
+
+.slot-row + .slot-row {
+  margin-top: 0.45rem;
+}
+
+.slot-row--active {
+  background: rgba(215, 173, 86, 0.14);
+  border-color: rgba(215, 173, 86, 0.35);
+}
+
+.slot-row strong {
+  display: block;
+  font-size: 0.86rem;
+  color: var(--color-forest);
+}
+
+.slot-row span {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--color-muted);
+}
+
+.slot-chip {
+  flex-shrink: 0;
+  font-size: 0.7rem;
+  font-weight: 750;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.5rem;
+  border-radius: var(--radius-pill);
+  background: rgba(0, 160, 155, 0.12);
+  color: var(--logo-teal);
+}
+
+.slot-chip--booked {
+  background: rgba(215, 173, 86, 0.28);
+  color: #6d5318;
+}
+
+/* Tablet: softer offsets, less motion intensity via CSS alone */
+@media (min-width: 700px) and (max-width: 899px) {
+  .product-previews {
+    max-width: 28rem;
+  }
+
+  .preview-stage-item--progress {
+    margin-left: 8%;
+  }
+
+  .preview-stage-item--booking {
+    margin-right: 6%;
+  }
+}
+
+/* Desktop: layered asymmetrical composition with controlled overlap */
+@media (min-width: 900px) {
+  .product-previews {
+    width: 100%;
+    max-width: none;
+    min-height: 620px;
+    margin-inline: 0;
+    display: block;
+  }
+
+  .preview-stage-item {
+    position: absolute;
+  }
+
+  .preview-stage-item--chat {
+    top: 0;
+    left: 0;
+    width: min(70%, 268px);
+    z-index: 3;
+  }
+
+  .preview-stage-item--progress {
+    top: 34%;
+    right: 0;
+    width: min(66%, 248px);
+    z-index: 2;
+  }
+
+  .preview-stage-item--booking {
+    top: 64%;
+    left: 12%;
+    width: min(74%, 278px);
+    z-index: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .preview-float-layer,
+  .preview-stage-item,
+  .preview-card {
+    animation: none !important;
+    transition: none !important;
+  }
+}

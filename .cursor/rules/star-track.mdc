@@ -1,0 +1,27 @@
+---
+description: Star Track project-wide rules for safe, incremental engineering
+alwaysApply: true
+---
+
+# Star Track engineering rules
+
+1. Read `docs/STAR_TRACK_MASTER_PRD.md` before planning or modifying features. Follow `docs/ARCHITECTURE.md`, `docs/DATABASE_SCHEMA.md`, `docs/IMPLEMENTATION_PLAN.md` and `docs/TEST_PLAN.md` for relevant tasks.
+2. Inspect the repository first. Existing working code is the source of truth for current implementation. Documents describe intended scope; do not claim unbuilt features exist.
+3. This is a four-week two-person academic MVP. Build only one approved catalog chatbot, one fixed sample degree plan, and basic advising booking. No university SIS, transcripts, auto degree audit or actual registration.
+4. Student checklist data is self-reported and NEVER an official degree audit. Do not invent catalog courses, university rules, policies, or source citations. If source evidence is insufficient, abstain and recommend speaking with an advisor.
+5. No real student personal information, passwords, secrets, API keys, token values or private university records in the repository, seed files, fixtures, browser assets or logs.
+6. Backend owns authorization. Never trust a client-provided student ID to establish ownership. Require appropriate session roles and validate request bodies.
+7. Passwords must be securely hashed. LLM credentials exist server-side via environment variables only. Do not expose secrets through `VITE_*` or client JavaScript.
+8. Enforce at most one active booking per appointment slot at the database level and in a transaction; a failed reschedule must preserve the old reservation.
+9. Before each implementation step: summarize files to edit, acceptance criteria, and tests. Then make minimal coherent changes without deleting unrelated code.
+10. Run relevant tests and report the actual command and result. Never invent successful tests, claimed performance numbers, or work completion. Add test coverage for happy paths, errors, role checks and conflicts.
+11. Use React/TypeScript frontend, FastAPI Python backend, SQLite for prototype records. Chroma and the model provider are proposals that must be confirmed before adding dependencies. Respect existing code conventions.
+12. Use Jira task references in branch names and commits when applicable. Do not change Jira status or claim a teammate approved anything without verification.
+13. Keep UX responsive, keyboard accessible, and explicit about loading, error, empty and insufficient-evidence states.
+14. Avoid em dashes in newly authored project documentation and user-facing copy.
+15. End each task with: files changed, decisions made, executed tests with results, unresolved risks, and next Jira item.
+16. Read `docs/PORTAL_INTEGRATION.md` before changing landing/login, routing, branding, hosting or portal-related features. Star Track is standalone and **integration-ready**, not integrated into JICS or Canvas. Future Quick Links or Canvas external URLs require authorized admins; do not attempt portal access or deployment on the university's behalf.
+17. A JICS or Canvas link never authenticates a user. Do not implement SSO, LTI, iframe embedding, student-system access or portal API calls as part of the course MVP. Do not copy the JICS portal UI or assume permission to use PSU logos.
+
+18. For all UI design work, read `docs/VISUAL_DESIGN_SPEC.md` and optionally view `docs/references/aeline-design-inspiration.png`. Adapt the reference’s floating product cards, expressive hero and whitespace into original Star Track branding. Do not copy logos, stock imagery, slogans or fake metrics.
+19. Keep the marketing landing page expressive and the authenticated student/advisor interfaces task-focused, accessible and clear.

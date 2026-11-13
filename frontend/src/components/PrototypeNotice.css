@@ -1,0 +1,29 @@
+.prototype-notice {
+  margin-top: 1.5rem;
+  padding: 1rem 1.1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: rgba(243, 247, 244, 0.85);
+  max-width: 42rem;
+}
+
+.prototype-notice__title {
+  margin: 0 0 0.45rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.prototype-notice p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--color-muted);
+}
+
+.prototype-notice p + p {
+  margin-top: 0.45rem;
+}

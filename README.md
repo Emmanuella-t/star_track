@@ -2,6 +2,10 @@
 
 Student advising prototype for Philander Smith University's Software Engineering final project, Group 3.
 
+## Project root
+
+This repository (`star_track/`) is the Git root. Keep application code, `docs/`, `frontend/`, and `backend/` here. If a parent folder also contains a `docs/` copy (for example a Cursor packaging wrapper), treat this repo's `docs/` as the source of truth.
+
 ## MVP
 - Source-grounded AI advising chatbot (planned)
 - Manual degree progress tracker for one sample program (planned)
