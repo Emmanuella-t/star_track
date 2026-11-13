@@ -48,7 +48,11 @@ describe('Star Track Phase 1 navigation', () => {
       'href',
       '/student/progress',
     )
-    expect(screen.getAllByText(/Coming soon/i).length).toBeGreaterThanOrEqual(2)
+    expect(screen.getByRole('link', { name: 'Meet with an advisor' })).toHaveAttribute(
+      'href',
+      '/student/appointments',
+    )
+    expect(screen.getAllByText(/Coming soon/i).length).toBeGreaterThanOrEqual(1)
   })
 
   it('opens the advisor dashboard from role selection', async () => {
@@ -59,6 +63,14 @@ describe('Star Track Phase 1 navigation', () => {
 
     expect(screen.getByRole('heading', { name: 'Advisor dashboard' })).toBeInTheDocument()
     expect(screen.getByText(/Manage your availability/i)).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: 'Manage availability' })).toHaveAttribute(
+      'href',
+      '/advisor/availability',
+    )
+    expect(screen.getByRole('link', { name: 'View appointments' })).toHaveAttribute(
+      'href',
+      '/advisor/appointments',
+    )
   })
 })
 

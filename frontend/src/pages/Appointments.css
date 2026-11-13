@@ -1,0 +1,240 @@
+.appointments-page {
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, #eef5f0 0%, var(--color-ivory) 24%),
+    var(--color-ivory);
+}
+
+.appointments-page__main {
+  padding: 2rem 0 3.5rem;
+  display: grid;
+  gap: 1.75rem;
+}
+
+.appointments-page__header {
+  display: grid;
+  gap: 0.65rem;
+  justify-items: start;
+  max-width: 40rem;
+}
+
+.appointments-page__header h1 {
+  font-size: clamp(1.9rem, 3.6vw, 2.6rem);
+}
+
+.appointments-page__lead {
+  color: var(--color-muted);
+  font-size: 1.05rem;
+}
+
+.appointments-page__back {
+  font-weight: 700;
+  color: var(--color-evergreen);
+  text-decoration: none;
+}
+
+.appointments-page__back:hover {
+  color: var(--logo-teal);
+}
+
+.appointments-page__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.appointments-layout {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 960px) {
+  .appointments-layout {
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: start;
+  }
+}
+
+.appointments-panel {
+  display: grid;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: var(--radius-xl);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-soft);
+}
+
+.appointments-panel h2 {
+  font-size: 1.2rem;
+}
+
+.appointments-panel__intro {
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.appointments-status {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.appointments-status--error {
+  color: var(--color-danger);
+}
+
+.appointments-status--success {
+  color: var(--logo-teal);
+  font-weight: 700;
+}
+
+.slot-list,
+.appointment-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.slot-option {
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  padding: 0.9rem 1rem;
+  cursor: pointer;
+  display: grid;
+  gap: 0.25rem;
+  color: inherit;
+  font: inherit;
+  transition:
+    border-color var(--motion-fast) var(--ease-out),
+    background var(--motion-fast) var(--ease-out);
+}
+
+.slot-option:hover,
+.slot-option:focus-visible {
+  border-color: var(--logo-teal);
+  outline: none;
+}
+
+.slot-option:focus-visible {
+  box-shadow: var(--focus-ring);
+}
+
+.slot-option.is-selected {
+  border-color: var(--color-evergreen);
+  background: #e7f2ec;
+}
+
+.slot-option__title {
+  font-weight: 700;
+}
+
+.slot-option__meta,
+.appointment-item__meta {
+  color: var(--color-muted);
+  font-size: 0.92rem;
+}
+
+.booking-form {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.booking-form label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 650;
+}
+
+.booking-form select,
+.booking-form input[type='date'],
+.booking-form input[type='time'] {
+  font: inherit;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.75rem;
+  background: var(--color-white);
+  color: var(--color-ink);
+}
+
+.booking-form select:focus-visible,
+.booking-form input:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.booking-summary {
+  margin: 0;
+  padding: 0.85rem 0.95rem;
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-muted);
+}
+
+.appointment-item {
+  display: grid;
+  gap: 0.55rem;
+  padding: 0.95rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.appointment-item__title {
+  font-weight: 700;
+}
+
+.appointment-item__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.slot-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.slot-row__copy {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.slot-badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 750;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.slot-badge--available {
+  background: #dff3ea;
+  color: var(--color-evergreen);
+}
+
+.slot-badge--booked {
+  background: #f3e7c9;
+  color: #7a5a12;
+}
+
+.slot-badge--closed,
+.slot-badge--past {
+  background: #e8ecea;
+  color: var(--color-muted);
+}

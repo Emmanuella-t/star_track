@@ -12,11 +12,17 @@ export function PrototypeNotice({ className }: PrototypeNoticeProps) {
     >
       <h2 className="prototype-notice__title">Prototype information</h2>
       <p>
-        Star Track currently uses example course information for demonstration. It is not connected
-        to official university academic records, transcripts, or degree audits.
+        Star Track uses example course information and fictional appointment records for classroom
+        demonstration. It is not connected to official university academic records, transcripts,
+        degree audits, or campus scheduling systems.
       </p>
       <p>
-        Verify degree requirements with your academic advisor before making registration decisions.
+        Confirm degree requirements and advising plans with your academic advisor before making
+        registration decisions.
+      </p>
+      <p>
+        Choosing Student or Advisor in Star Track is a simple way to explore the app. It is not
+        authentication or verified campus identity.
       </p>
     </aside>
   )

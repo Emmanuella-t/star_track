@@ -36,7 +36,9 @@ export function StudentDashboard() {
           <article className="dash-card">
             <h2>Advisor appointments</h2>
             <p>Find an open time and reserve a meeting with your advisor.</p>
-            <p className="dash-card__status">Coming soon</p>
+            <Button to="/student/appointments" variant="primary">
+              Meet with an advisor
+            </Button>
           </article>
         </section>
 

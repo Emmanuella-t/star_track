@@ -8,13 +8,16 @@ This repository (`star_track/`) is the Git root. Keep application code, `docs/`,
 
 ## MVP
 - Source-grounded AI advising chatbot (planned)
-- Manual degree progress tracker for one sample program (planned)
-- Advisor availability and appointment booking (planned)
+- Manual degree progress tracker for one sample Computer Science plan (frontend complete)
+- Advisor availability and appointment booking (FastAPI + SQLite, student and advisor UI)
 
 No live student records or student information system integration. This is not an official advising service.
+Role selection on `/demo` is classroom navigation only. It is not authentication or campus SSO.
 
 ## Stack
-React + TypeScript + Vite frontend, Python + FastAPI backend, SQLite planned, retrieval store to be selected.
+React + TypeScript + Vite frontend, Python + FastAPI backend, SQLite for appointments, retrieval store to be selected.
+
+Frontend talks to the API at `VITE_API_URL` (default `http://localhost:8000`).
 
 ## Run backend
 Requires Python 3.11+.

@@ -24,12 +24,16 @@ export function AdvisorDashboard() {
           <article className="dash-card">
             <h2>Availability</h2>
             <p>Publish office hours so students can book time with you.</p>
-            <p className="dash-card__status">Coming soon</p>
+            <Button to="/advisor/availability" variant="primary">
+              Manage availability
+            </Button>
           </article>
           <article className="dash-card">
             <h2>Upcoming bookings</h2>
             <p>Review which students have reserved your open slots.</p>
-            <p className="dash-card__status">Coming soon</p>
+            <Button to="/advisor/appointments" variant="primary">
+              View appointments
+            </Button>
           </article>
           <article className="dash-card">
             <h2>Student notes</h2>
